@@ -1,18 +1,12 @@
 package net.sprunkisnt.pvptweaks.event;
 
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.entity.EntityType;
 import net.minecraft.util.math.Vec3d;
 import net.sprunkisnt.pvptweaks.PvPTweaksUtil;
-import net.sprunkisnt.pvptweaks.mixin.PlayerEntityMixin;
 
 public class PlayerEvents {
     public static final float DASH_VEL = 1.0f; // ~2.5 blocks
-    private static final PlayerEntityMixin playerEntity = new PlayerEntityMixin(
-            EntityType.PLAYER,
-            MinecraftClient.getInstance().world,
-            2000
-    );
+    public static final int INVULNERABILITY_TICKS = 20;
 
     public static void dash(MinecraftClient client) {
         assert client.player != null;
@@ -23,6 +17,6 @@ public class PlayerEvents {
                 0,
                 direction.z * DASH_VEL
         );
-        playerEntity.setInvincible();
+        client.player.setInvulnerable(true);
     }
 }
