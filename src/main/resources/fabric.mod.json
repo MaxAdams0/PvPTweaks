@@ -1,0 +1,43 @@
+{
+	"schemaVersion": 1,
+	"id": "pvptweaks",
+	"version": "${version}",
+	"name": "PvPTweaks",
+	"description": "Simple additions and value changes to make PvP more engaging.",
+	"authors": [
+		"SprunkIsnt"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://github.com/FabricMC/PvPTweaks"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/pvptweaks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.sprunkisnt.pvptweaks.PvPTweaks"
+		],
+		"client": [
+			"net.sprunkisnt.pvptweaks.PvPTweaksClient"
+		],
+		"util": [
+			"net.sprunkisnt.pvptweaks.PvPTweaksUtil"
+		],
+		"fabric-datagen": [
+			"net.sprunkisnt.pvptweaks.PvPTweaksDataGenerator"
+		]
+	},
+	"mixins": [
+		"pvptweaks.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
