@@ -3,7 +3,7 @@
 	"id": "pvptweaks",
 	"version": "${version}",
 	"name": "PvPTweaks",
-	"description": "Simple additions and value changes to make PvP more engaging.",
+	"description": "Simple additions and value changes to make PvP more engaging",
 	"authors": [
 		"SprunkIsnt"
 	],
@@ -21,15 +21,12 @@
 		"client": [
 			"net.sprunkisnt.pvptweaks.PvPTweaksClient"
 		],
-		"util": [
-			"net.sprunkisnt.pvptweaks.PvPTweaksUtil"
-		],
 		"fabric-datagen": [
 			"net.sprunkisnt.pvptweaks.PvPTweaksDataGenerator"
 		]
 	},
 	"mixins": [
-		"pvptweaks.mixins.json"
+
 	],
 	"depends": {
 		"fabricloader": ">=0.15.6",
